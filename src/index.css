@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #F4EEE0; /* paper */
+    color: #1F1B16; /* ink */
+    font-family: 'Familjen Grotesk', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+  }
+
+  .font-mono-data {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer utilities {
+  /* Hard tactile offset shadows */
+  .shadow-ink-sm {
+    box-shadow: 2px 2px 0 #1F1B16;
+  }
+  .shadow-ink {
+    box-shadow: 4px 4px 0 #1F1B16;
+  }
+  .shadow-ink-lg {
+    box-shadow: 6px 6px 0 #1F1B16;
+  }
+  .shadow-ink-xl {
+    box-shadow: 8px 8px 0 #1F1B16;
+  }
+  
+  /* Risograph button press effect */
+  .pressable {
+    transition: transform 0.08s ease-out, box-shadow 0.08s ease-out;
+  }
+  .pressable:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 #1F1B16;
+  }
+  .pressable:active {
+    transform: translate(3px, 3px);
+    box-shadow: 1px 1px 0 #1F1B16;
+  }
+
+  /* Woodblock Stamp Effect */
+  .stamp-effect {
+    position: relative;
+    border: 2px solid #1F1B16;
+    background-color: #E8EFE7;
+    color: #3F6B3A;
+  }
+}
+
+/* Custom Scrollbar for Risograph Aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EDE5D3;
+  border-left: 2px solid #1F1B16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1F1B16;
+  border: 1px solid #F4EEE0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3F6B3A;
+}
